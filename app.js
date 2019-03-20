@@ -9,7 +9,7 @@ var PythonShell = require('python-shell');
 
 
 /*Google api requirements and setup*/
-var google = require('googleapis');
+var {google} = require('googleapis');
 var OAuth2 = google.auth.OAuth2;
 var messageArray = [];
 var tempIdStorage = [];
@@ -21,7 +21,11 @@ google.options({
 
 var gmail = google.gmail('v1');
 
-var oauth2Client = new OAuth2('57009974619-r6ae8uvkd08qifmoob4rn1pt69o4udj2.apps.googleusercontent.com', 't1_f1ZNbiMz1tnFzfbiAjuaY', "http://www.finefilterapp.com/load");
+
+//Note that the appdomain has to be registered with the google account running the app.
+var appdomain = "http://www.finefilterapp.com/"
+
+var oauth2Client = new OAuth2('57009974619-r6ae8uvkd08qifmoob4rn1pt69o4udj2.apps.googleusercontent.com', 't1_f1ZNbiMz1tnFzfbiAjuaY', appdomain + "load");
 console.log(oauth2Client)
 
 var scopes = ['https://www.googleapis.com/auth/gmail.modify'];
@@ -258,7 +262,7 @@ app.get('/thankyou', function(req,res) {
   res.render('thankyou.ejs');
 });
 
-app.listen(80, function() {
-  console.log('Example app listening on port 80!')
+app.listen(8080, function() {
+  console.log('Example app listening on port 8080!')
 });
 

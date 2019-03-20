@@ -3,7 +3,7 @@ import json
 import pandas
 import numpy
 import ordered_set
-import sklearn
+from sklearn import naive_bayes
 
 """
 def scikitStuff(dataset_array):
@@ -34,7 +34,7 @@ def scikitStuff(dataset_array):
 	#twenty_train = fetch_20newsgroups(subset='train',categories=categories, shuffle=True, random_state=42)
 
 def testModel(inArray, outArray):
-	from sklearn.naive_bayes import MultinomialNB
+	from naive_bayes import MultinomialNB
 	model = MultinomialNB()
 	model.fit(inArray[0:94], outArray[0:94])
 	print(model.score(inArray[94:99], outArray[94:99]))

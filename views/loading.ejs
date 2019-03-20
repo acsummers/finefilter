@@ -40,7 +40,15 @@
   </svg>
 </div>
 
-<script>setInterval(function(){ window.location.href = 'http://finefilterapp.com/test' }, 3000);
+<script>setInterval(function(){ 
+  var indexOfLoading = window.location.href.indexOf('load');
+  if (indexOfLoading != -1) {
+    window.location.href = window.location.href.substring(0, indexOfLoading) + 'test';
+  }
+  else {
+    window.location.href = 'http://finefilterapp.com/test'
+  }
+ }, 3000);
 </script>
 
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>

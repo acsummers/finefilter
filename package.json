@@ -1,0 +1,25 @@
+{
+  "name": "finefilter",
+  "version": "0.5.0",
+  "description": "The app that deals with emails that don't matter, so you can focus on your important and interesting communications.",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acsummers/finefilter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acsummers/finefilter/issues"
+  },
+  "homepage": "https://github.com/acsummers/finefilter#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "googleapis": "^27.0.0",
+    "python-shell": "^1.0.7"
+  }
+}
